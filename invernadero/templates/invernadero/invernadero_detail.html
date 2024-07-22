@@ -1,0 +1,14 @@
+<!-- invernadero/templates/invernadero/invernadero_detail.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalle de Invernadero</title>
+</head>
+<body>
+    <h1>Detalle de Invernadero</h1>
+    <p>{{ object }}</p>
+    <a href="{% url 'invernadero_update' object.pk %}">Editar</a>
+    <a href="{% url 'invernadero_delete' object.pk %}">Eliminar</a>
+    <a href="{% url 'invernadero_list' %}">Volver a la lista</a>
+</body>
+</html>

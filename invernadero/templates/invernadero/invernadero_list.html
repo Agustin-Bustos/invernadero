@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Invernaderos</title>
+</head>
+<body>
+    <h1>Lista de Invernaderos</h1>
+    <ul>
+        {% for objeto in object_list %}
+            <li><a href="{% url 'invernadero_detail' objeto.pk %}">{{ objeto }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'invernadero_create' %}">Crear nuevo Invernadero</a>
+</body>
+</html>
