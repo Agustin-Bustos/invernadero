@@ -1,0 +1,25 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+}
+    
+/* Ejemplo de estilos personalizados */
+body {
+    padding-top: 20px;
+}
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}

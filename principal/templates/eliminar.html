@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}CRUD{% endblock %}
+{% block content %}
+
+desea realmente elmimniar a {{ clientes.nombre }} {{ clientes.apellido }}?????g??????a???????y??????
+<form method="post" action="eliminar">
+    {% csrf_token %}
+    <button type="submit" class="form-submit">eliminar</button>
+</form>
+{% endblock %}

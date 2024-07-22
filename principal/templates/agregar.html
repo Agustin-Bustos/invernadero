@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}CRUD{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar {{ model }}</title>
+</head>
+<body>
+    <h1>Agregar {{ model }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+
+    {% if form.errors %}
+    <div>
+        <h2>Errores encontrados:</h2>
+        <ul>
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <li>{{ field.label }}: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</body>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hola mundo</title>
+</head>
+<h1>PRODUCTOS</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <div
+                class="table-responsive"
+            >
+                <table
+                    class="table table-primary"
+                >
+                    <thead>
+                        <tr>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">DESCRIPCION</th>
+                            <th scope="col">PRECIO</th>
+                            <th scope="col">PROOVEDORES</th>
+                        </tr>
+                        
+                    </thead>
+                    {% for producto in productos %}
+                        
+                    
+                    <tbody>
+                            <td scope="row">{{ producto.nombre }}</td>
+                            <td>{{ producto.descpicion }}</td>
+                            <td>{{ producto.correo }}</td>
+                            <td>{{ producto.precio }}</td>
+                            <td>{{ producto.preoveedor }}</td>
+                            <td><button><a href="cliente_list/{{producto.id}}/editar">editar</button><button>borrar</button></td>
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+            
+        </nav>
+    </header>
+<body>
+    
+</body>
+</html>
